@@ -1,9 +1,53 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOW EARTH ORBIT</title>
+<style>
+  /* Define border width and color as variables */
+  :root {
+    --border-width: 15px;
+    --border-color: #34ff00;
+  }
+
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    position: relative;
+    width: 1500px; /* Adjust width as needed */
+    height: 1100px; /* Adjust height as needed */
+    border: var(--border-width) solid var(--border-color);
+    filter: drop-shadow(10px 10px 0px #ff00cf); /* Adjust shadow properties as needed */
+  }
+
+  .logo {
+    position: absolute;
+    top: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
+    left: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
+    width: 15%; /* Maximum width of 15% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: calc(100% - 2 * var(--border-width)); /* Maximum width minus border width */
+    z-index: 1; /* Ensure the image is above the border */
+    border: var(--border-width) solid var(--border-color); /* Set logo border color to match original border color */
+  }
+</style>
 </head>
 <body>
-<p>20.04.2024 ruef***o.</p>
+
+<div class="container">
+  <img class="logo" src="logo_font.png" alt="Logo">
+  <!-- Your content goes here -->
+</div>
+
 </body>
 </html>
+
