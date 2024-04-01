@@ -1,9 +1,70 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOW EARTH ORBIT</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
+<style>
+  /* Define border width and color as variables */
+  :root {
+    --border-width: 15px;
+    --main-color: #34ff00;
+    --second-color: #ff00cf;
+    --font-family: 'Fira Mono', monospace; /* Fira Mono font from Mozilla */
+  }
+
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family); /* Set font family */
+    color: white; /* Set text color */
+  }
+
+  .container {
+    position: relative;
+    width: 1500px; /* Adjust width as needed */
+    height: 1100px; /* Adjust height as needed */
+    border: var(--border-width) solid var(--main-color);
+    filter: drop-shadow(10px 10px 0px var(--second-color)); /* Adjust shadow properties as needed */
+  }
+
+  .logo {
+    position: absolute;
+    top: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
+    left: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
+    width: 15%; /* Maximum width of 15% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: calc(100% - 2 * var(--border-width)); /* Maximum width minus border width */
+    z-index: 1; /* Ensure the image is above the border */
+    border: var(--border-width) solid var(--main-color); /* Set logo border color to match original border color */
+    padding: var(--border-width);
+  }
+
+  .dummy-text {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: var(--main-color); /* Set text color to match border color */
+    filter: none; /* Remove drop shadow */
+  }
+</style>
 </head>
 <body>
-<p>20.04.2024 ruef***o.</p>
+
+<div class="container">
+  <img class="logo" src="./assets/logo_font.png" alt="Logo">
+  <!-- Dummy text -->
+  <div class="dummy-text">
+    <p>It was a usual night for Cleo. Years, seeing nothing but noise from that Xuntian thingy up there, in low earth orbit. An older, captured radio satellite, open to use by the community listening into space. A journey of randomness and nothing but noise. And some artifacts. Wait a minute, what? </p>
+  </div>
+</div>
+
 </body>
 </html>
+
