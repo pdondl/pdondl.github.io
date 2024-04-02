@@ -48,7 +48,17 @@
     padding: var(--border-width);
   }
 
-  .dummy-text {
+  .flyer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - var(--border-width) * 30);
+    max-height: calc(100% - var(--border-width) * 30);
+    width: auto;
+    height: auto;
+  }
+  .story-text {
     position: absolute;
     bottom: 3%; /* Adjust as needed */
     left: 5%; /* Adjust as needed */
@@ -62,12 +72,9 @@
 
 <div class="container">
   <img class="logo" src="./assets/logo_font.png" alt="Logo">
-  <!-- Dummy text -->
-  <div class="dummy-text">
-    <p>It was a usual night for Cleo. Years, seeing nothing but noise from that Xuntian thingy up there, in low earth orbit. An older, captured radio satellite, open to use by the community listening into space. A journey of randomness and nothing but noise. And some artifacts. Wait a minute, what?</p>
-  </div>
+  <p class="story-text">It was a usual night for Cleo. Years, seeing nothing but noise from that Xuntian thingy up there, in low earth orbit. An older, captured radio satellite, open to use by the community listening into space. A journey of randomness and nothing but noise. And some artifacts. Wait a minute, what?</p>
+  <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
 </div>
-
 </body>
 </html>
 
