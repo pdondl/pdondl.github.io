@@ -8,9 +8,10 @@
 <style>
   /* Define border width and color as variables */
   :root {
-    --border-width: 15px;
-    --main-color: #34ff00;
-    --second-color: #ff00cf;
+    --border-width: 10px;
+    --drop-shadow-distance: 5px;
+    --primary-color: #34ff00;
+    --secodary-color: #ff00cf;
     --font-family: 'Fira Mono', monospace; /* Fira Mono font from Mozilla */
   }
 
@@ -28,11 +29,11 @@
 
   .container {
     position: relative;
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
+    width: 90%; /* Adjust width as needed */
+    height: 90%; /* Adjust height as needed */
     margin: 2%;
-    border: var(--border-width) solid var(--main-color);
-    filter: drop-shadow(10px 10px 0px var(--second-color)); /* Adjust shadow properties as needed */
+    border: var(--border-width) solid var(--primary-color);
+    filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secodary-color)); /* Adjust shadow properties as needed */
   }
 
   .logo {
@@ -43,7 +44,7 @@
     height: auto; /* Maintain aspect ratio */
     max-width: calc(100% - 2 * var(--border-width)); /* Maximum width minus border width */
     z-index: 1; /* Ensure the image is above the border */
-    border: var(--border-width) solid var(--main-color); /* Set logo border color to match original border color */
+    border: var(--border-width) solid var(--primary-color); /* Set logo border color to match original border color */
     padding: var(--border-width);
   }
 
@@ -52,7 +53,7 @@
     bottom: 3%; /* Adjust as needed */
     left: 5%; /* Adjust as needed */
     margin: 3%;
-    color: var(--main-color); /* Set text color to match border color */
+    color: var(--primary-color); /* Set text color to match border color */
     filter: none; /* Remove drop shadow */
   }
 </style>
