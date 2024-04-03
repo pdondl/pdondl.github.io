@@ -4,98 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOW EARTH ORBIT</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
-<style>
-  /* Define border width and color as variables */
-  :root {
-    --border-width: 10px;
-    --drop-shadow-distance: 5px;
-    --primary-color: #34ff00;
-    --secodary-color: #ff00cf;
-    --font-family: 'Fira Mono', monospace; /* Fira Mono font from Mozilla */
-  }
-
-  body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: var(--font-family); /* Set font family */
-    color: white; /* Set text color */
-  }
-
-  .container {
-    position: relative;
-    width: 90%; /* Adjust width as needed */
-    height: 90%; /* Adjust height as needed */
-    margin: 2%;
-    border: var(--border-width) solid var(--primary-color);
-    filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secodary-color)); /* Adjust shadow properties as needed */
-    overflow: auto; /* Add overflow property */
-    display: flex; /* Add flex display */
-    flex-wrap: wrap; /* Add flex-wrap property */
-  }
-
-
-  .logo {
-    position: absolute;
-    top: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
-    left: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
-    width: 15%; /* Maximum width of 15% of the container width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: calc(100% - 2 * var(--border-width)); /* Maximum width minus border width */
-    z-index: 1; /* Ensure the image is above the border */
-    border: var(--border-width) solid var(--primary-color); /* Set logo border color to match original border color */
-    padding: var(--border-width);
-  }
-
-  .links {
-    position: absolute;
-    top: 0; /* Align links to the middle of the container */
-    left: calc(15% + 4 * var(--border-width)); /* Align links to the left */
-    /* width: 100%; /* Maximum width of 15% of the container width */
-    /* height: 100%; /* Set the height of the links */
-    z-index: 1; /* Ensure the links are above the border */
-    /* border: var(--border-width) solid var(--primary-color); Set links border color to match original border color */
-    padding: var(--border-width);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3%;
-  }
-
-  .links a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-
-  .story-text {
-    position: relative;
-    top: calc(15% + 7 * var(--border-width)); /* Align text below the links section */
-    left: 0; /* Align text to the right of the logo and links */
-    width: 100%; /* Set width to utilize remaining space */
-    overflow-y: auto; /* Add scrollbar if text exceeds container height */
-    color: var(--primary-color); /* Set text color */
-    filter: none; /* Remove drop shadow */
-    padding: 3%;
-  }
-</style>
 </head>
 <body>
 
-<div class="container">
-  <img class="logo" src="./assets/logo_font.png" alt="Logo">
-  <div class="links">
-    <a href="index.html">Home</a> || <a href="story.html">Story</a> || <a href="flyer.html">Flyer</a>
+<div class="main-container">
+  <div class="header">
+    <img class="logo" src="./assets/logo_font.png" alt="Logo">
+    <div class="links">
+      <a href="index.html">&#124;Home&#124; </a> <a href="story.html"> &#124;History&#124;</a> <a href="flyer.html">&#124;Flyer&#124;</a>
+    </div>
   </div>
-  <p class="story-text">
-    <span style="font-weight:bold;">part I (22/11/18)</span><br><br>
-    It was a usual night for Cleo. Years, seeing nothing but noise from that Xuntian thingy up there, in low earth orbit. An older, captured radio satellite, open to use by the community listening into space. A journey of randomness and nothing but noise. And some artifacts. Wait a minute, what?
-  </p>
+  <div class="content">
+    <h1 class="text">part 1 - suspicious object (22/11/18)</h1>
+    <p class="text">
+      It was a usual night for Cleo. Years, seeing nothing but noise from that Xuntian thingy up there, in low earth orbit. An older, captured radio satellite, open to use by the community listening into space. A journey of randomness and nothing but noise. And some artifacts. Wait a minute, what?
+    </p>
+    <h1 class="text">part 2 - we have proof! (24/04/20)</h1>
+    <p class="text">
+      Cleo got up and left the stale room. This can’t be true, it must be due to lack of oxygen and sleep. They couldn’t remember how long they’d waited, staring into nothing, feeling somewhat scared to look at the screen again. Finally, slowly opening the door and taking a glimpse - the repetitive pattern was still there. “FOR FUCK’S SAKES I KNEW IT!” - “Come on” Remy mumbled “let me slee-” “THEY EXIST! WE HAVE PROOF!”
+    </p>
+  </div>
 </div>
 </body>
 </html>
