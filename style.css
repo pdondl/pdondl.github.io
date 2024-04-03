@@ -50,7 +50,9 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 3%;
+    padding: 2%;
+    display: block;
+    margin: auto;
 }
 
 .flyer {
@@ -65,10 +67,15 @@ body {
 
 .content {
     position: absolute;
-    top: calc(15% + 4 * var(--border-width)); /* Align text below the links section */
+    top: calc(15% + var(--border-width)); /* Align text below the links section */
     left: calc(var(--border-width));
     max-width: calc(100% - var(--border-width));
     margin: auto;
+}
+
+.legal {
+    position: absolute;
+    bottom: 0;
 }
 
 .text {
@@ -78,11 +85,20 @@ body {
 .links a {
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
+.legal a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 .text h1 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+.text p {
+    font-size: 15px;
 }
