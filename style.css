@@ -58,7 +58,7 @@ body {
 .flyer {
     position: relative;
     margin: auto; /* Center the flyer */
-    max-width: 70%; /* Adjust max-width as needed */
+    max-width: 65%; /* Adjust max-width as needed */
     width: auto;
     height: auto;
     object-fit: cover;
