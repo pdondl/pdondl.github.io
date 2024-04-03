@@ -51,14 +51,14 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 2%;
-    display: block;
+    /*display: block; */
     margin: auto;
 }
 
 .flyer {
     position: relative;
     margin: auto; /* Center the flyer */
-    max-width: 60%; /* Adjust max-width as needed */
+    max-width: 70%; /* Adjust max-width as needed */
     width: auto;
     height: auto;
     object-fit: cover;
