@@ -22,8 +22,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: var(--font-family); /* Set font family */
-    color: white; /* Set text color */
+    font-family: var(--font-family);
   }
 
   .header {
@@ -62,65 +61,31 @@
     padding: 3%;
   }
 
-  /*.links {
-    position: absolute;
-    top: 0;
-    left: calc(15% + 4 * var(--border-width));
-    z-index: 1;
-    padding: var(--border-width);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3%;
-  }*/
-
-
-
-  /*.flyer {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: calc(100% - var(--border-width) * 30);
-    max-height: calc(100% - var(--border-width) * 30);
-    width: auto;
-    height: auto;
-  }*/
-
   .flyer {
     position: relative;
-    float: left; /* Float the flyer to the right */
-    margin: 0 0 10px 10px; /* Adjust margin as needed */
-    max-width: calc(100% - var(--border-width) * 30);
+    margin: auto; /* Center the flyer */
+<!--    float: left; /* Float the flyer to the right */-->
+    margin: auto; /* Adjust margin as needed */
+    max-width: 40%;-->
+<!--    width: 40%;-->
+<!--    height: 40%;-->
     width: auto;
     height: auto;
+    object-fit: cover;
+    display: block;
   }
 
   .content {
-    position: relative;
-    top: calc(15% + 7 * var(--border-width)); /* Align text below the links section */
-    left: 0; /* Align text to the right of the logo and links */
-    width: 100%; /* Set width to utilize remaining space */
+    position: absolute;
+    top: calc(15% + 2 * var(--border-width)); /* Align text below the links section */
+    left: calc(var(--border-width));
+    max-width: calc(100% - var(--border-width));
+    margin: auto;
   }
 
-  .story-text {
-    /*height: calc(50% - var(--border-width)); Set height to half of the container height minus border width */
-    overflow-y: auto; /* Add scrollbar if text exceeds container height */
+  .text {
     color: var(--primary-color); /* Set text color */
-    filter: none; /* Remove drop shadow */
-    padding: 3%;
   }
-
-  /*.story-text {
-    top: calc(15% + 7 * var(--border-width) + 20px);
-    left: 0;
-    width: 100%;
-    overflow-y: auto;
-    color: var(--primary-color);
-    filter: none;
-    padding: 3%;
-  }*/
 
   .links a {
     color: var(--primary-color);
@@ -129,11 +94,7 @@
     font-weight: bold;
   }
 
-  .story-text p {
-    font-size: 180px;
-  }
-
-  .story-text h1 {
+  .text h1 {
     font-size: 25px;
     font-weight: bold;
   }
@@ -146,12 +107,12 @@
   <div class="header">
     <img class="logo" src="./assets/logo_font.png" alt="Logo">
     <div class="links">
-      <a href="index.html">Home</a> || <a href="story.html">Story</a> || <a href="flyer.html">Flyer</a>
+      <a href="index.html">Home</a> || <a href="story.html">History</a> || <a href="flyer.html">Flyer</a>
     </div>
   </div>
   <div class="content">
-    <h1 class="story-text">part 2 (22/11/18)</h1>
-    <p class="story-text">
+    <h1 class="text">part 2 (22/11/18)</h1>
+    <p class="text">
       Cleo got up and left the reeky room. This can’t be true, it must be due to lack of oxygen and sleep. S*he can’t remember how long s*he waited, staring into nothing, feeling somewhat scared to look at the screen again. Finally, slowly opening the door and taking a glimpse - the repetitive pattern was still ongoing. “FOR FUCK’S SAKES I KNEW IT!” - “Come on” Remy mumbled from the couch “let me slee-” “THEY EXIST! WE HAVE PROOF!”
     </p>
     <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
