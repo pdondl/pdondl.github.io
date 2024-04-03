@@ -6,13 +6,12 @@
 <title>LOW EARTH ORBIT</title>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap">
 <style>
-  /* Define border width and color as variables */
   :root {
     --border-width: 10px;
     --drop-shadow-distance: 5px;
     --primary-color: #34ff00;
-    --secodary-color: #ff00cf;
-    --font-family: 'Fira Mono', monospace; /* Fira Mono font from Mozilla */
+    --secondary-color: #ff00cf;
+    --font-family: 'Fira Mono', monospace;
   }
 
   body {
@@ -27,39 +26,35 @@
     color: white; /* Set text color */
   }
 
-  .container {
+  .header {
+    position: absolute;
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    display: flex;
+    align-items: center;
+    height: auto; /* Set to auto */
+  }
+
+  .main-container {
     position: relative;
-    width: 90%; /* Adjust width as needed */
-    height: 90%; /* Adjust height as needed */
+    width: 90%;
+    height: 90%;
     margin: 2%;
     border: var(--border-width) solid var(--primary-color);
-    filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secodary-color));
+    filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secondary-color));
     overflow: auto;
     display: flex;
-    flex-direction: column; /* Change flex-direction to column */
+    flex-direction: column;
   }
 
   .logo {
-    position: absolute;
-    top: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
-    left: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
-    width: 15%; /* Maximum width of 15% of the container width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: calc(100% - 2 * var(--border-width)); /* Maximum width minus border width */
-    z-index: 1; /* Ensure the image is above the border */
-    border: var(--border-width) solid var(--primary-color); /* Set logo border color to match original border color */
+    width: 15%;
+    max-width: calc(100% - 2 * var(--border-width));
+    border: var(--border-width) solid var(--primary-color);
     padding: var(--border-width);
   }
 
   .links {
-    position: absolute;
-    top: 0; /* Align links to the middle of the container */
-    left: calc(15% + 4 * var(--border-width)); /* Align links to the left */
-    /* width: 100%; /* Maximum width of 15% of the container width */
-    /* height: 100%; /* Set the height of the links */
-    z-index: 1; /* Ensure the links are above the border */
-    /* border: var(--border-width) solid var(--primary-color); Set links border color to match original border color */
-    padding: var(--border-width);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -67,12 +62,20 @@
     padding: 3%;
   }
 
-  .links a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-  }
+  /*.links {
+    position: absolute;
+    top: 0;
+    left: calc(15% + 4 * var(--border-width));
+    z-index: 1;
+    padding: var(--border-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+  }*/
+
+
 
   /*.flyer {
     position: relative;
@@ -94,28 +97,37 @@
     height: auto;
   }
 
-  /*.story-text {
+  .content {
     position: relative;
     top: calc(15% + 7 * var(--border-width)); /* Align text below the links section */
     left: 0; /* Align text to the right of the logo and links */
     width: 100%; /* Set width to utilize remaining space */
+  }
+
+  .story-text {
     /*height: calc(50% - var(--border-width)); Set height to half of the container height minus border width */
     overflow-y: auto; /* Add scrollbar if text exceeds container height */
     color: var(--primary-color); /* Set text color */
     filter: none; /* Remove drop shadow */
     padding: 3%;
+  }
+
+  /*.story-text {
+    top: calc(15% + 7 * var(--border-width) + 20px);
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    color: var(--primary-color);
+    filter: none;
+    padding: 3%;
   }*/
 
-  .story-text {
-  /* Adjust top property to create space for the flyer */
-  top: calc(15% + 7 * var(--border-width) + 20px); /* Add some space between text and flyer */
-  left: 0;
-  width: 100%;
-  overflow-y: auto;
-  color: var(--primary-color);
-  filter: none;
-  padding: 3%;
-}
+  .links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+  }
 
   .story-text p {
     font-size: 180px;
@@ -130,18 +142,20 @@
 </head>
 <body>
 
-<div class="container">
+<div class="main-container">
   <div class="header">
     <img class="logo" src="./assets/logo_font.png" alt="Logo">
     <div class="links">
       <a href="index.html">Home</a> || <a href="story.html">Story</a> || <a href="flyer.html">Flyer</a>
     </div>
   </div>
-  <h1 class="story-text">part 2 (22/11/18)</h1>
-  <p class="story-text">
-    Cleo got up and left the reeky room. This can’t be true, it must be due to lack of oxygen and sleep. S*he can’t remember how long s*he waited, staring into nothing, feeling somewhat scared to look at the screen again. Finally, slowly opening the door and taking a glimpse - the repetitive pattern was still ongoing. “FOR FUCK’S SAKES I KNEW IT!” - “Come on” Remy mumbled from the couch “let me slee-” “THEY EXIST! WE HAVE PROOF!”
-  </p>
-  <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
+  <div class="content">
+    <h1 class="story-text">part 2 (22/11/18)</h1>
+    <p class="story-text">
+      Cleo got up and left the reeky room. This can’t be true, it must be due to lack of oxygen and sleep. S*he can’t remember how long s*he waited, staring into nothing, feeling somewhat scared to look at the screen again. Finally, slowly opening the door and taking a glimpse - the repetitive pattern was still ongoing. “FOR FUCK’S SAKES I KNEW IT!” - “Come on” Remy mumbled from the couch “let me slee-” “THEY EXIST! WE HAVE PROOF!”
+    </p>
+    <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
+  </div>
 </div>
 
 </body>
