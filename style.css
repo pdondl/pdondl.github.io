@@ -1,90 +1,88 @@
 :root {
---border-width: 10px;
---drop-shadow-distance: 5px;
---primary-color: #34ff00;
---secondary-color: #ff00cf;
---font-family: 'Fira Mono', monospace;
+    --border-width: 10px;
+    --drop-shadow-distance: 5px;
+    --primary-color: #34ff00;
+    --secondary-color: #ff00cf;
+    --font-family: 'Fira Mono', monospace;
 }
 
 body {
-background-color: black;
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-font-family: var(--font-family);
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
 }
 
 .header {
-position: absolute;
-top: calc(-1 * var(--border-width));
-left: calc(-1 * var(--border-width));
-display: flex;
-align-items: center;
-height: auto; /* Set to auto */
+    position: absolute;
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    display: flex;
+    align-items: center;
+    height: auto; /* Set to auto */
 }
 
 .main-container {
-position: relative;
-width: 90%;
-height: 90%;
-margin: 2%;
-border: var(--border-width) solid var(--primary-color);
-filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secondary-color));
-overflow: auto;
-display: flex;
-flex-direction: column;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 2%;
+    border: var(--border-width) solid var(--primary-color);
+    /*filter: drop-shadow(var(--drop-shadow-distance) var(--drop-shadow-distance) 0px var(--secondary-color));*/
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
-width: 15%;
-max-width: calc(100% - 2 * var(--border-width));
-border: var(--border-width) solid var(--primary-color);
-padding: var(--border-width);
+    width: 15%;
+    max-width: calc(100% - 2 * var(--border-width));
+    border: var(--border-width) solid var(--primary-color);
+    padding: var(--border-width);
 }
 
 .links {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-padding: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
 }
 
 .flyer {
-position: relative;
-margin: auto; /* Center the flyer */
-<!--    float: left; /* Float the flyer to the right */-->
-margin: auto; /* Adjust margin as needed */
-max-width: 60%;-->
-width: auto;
-height: auto;
-object-fit: cover;
-display: block;
+    position: relative;
+    margin: auto; /* Center the flyer */
+    max-width: 60%; /* Adjust max-width as needed */
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 .content {
-position: absolute;
-top: calc(15% + 2 * var(--border-width)); /* Align text below the links section */
-left: calc(var(--border-width));
-max-width: calc(100% - var(--border-width));
-margin: auto;
+    position: absolute;
+    top: calc(15% + 4 * var(--border-width)); /* Align text below the links section */
+    left: calc(var(--border-width));
+    max-width: calc(100% - var(--border-width));
+    margin: auto;
 }
 
 .text {
-color: var(--primary-color); /* Set text color */
+    color: var(--primary-color); /* Set text color */
 }
 
 .links a {
-color: var(--primary-color);
-text-decoration: none;
-font-size: 25px;
-font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .text h1 {
-font-size: 25px;
-font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
 }
