@@ -39,7 +39,6 @@
     flex-wrap: wrap; /* Add flex-wrap property */
   }
 
-
   .logo {
     position: absolute;
     top: calc(-1 * var(--border-width)); /* Adjust to align with the outside of the border */
@@ -73,35 +72,12 @@
     text-decoration: none;
   }
 
-  /*.flyer {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: calc(100% - var(--border-width) * 30);
-    max-height: calc(100% - var(--border-width) * 30);
-    width: auto;
-    height: auto;
-  }*/
-
   .flyer {
-    float: left; /* Float the flyer to the right */
-    margin: 0 0 10px 10px; /* Adjust margin as needed */
-    max-width: calc(100% - var(--border-width) * 30);
-    width: auto;
+    margin-bottom: 20px; /* Add some space between flyers */
+    max-width: 70%; /* Ensure flyers don't exceed container width */
+    width: 70%:
     height: auto;
-  }
-
-  .story-text {
-    position: relative;
-    top: calc(15% + 7 * var(--border-width)); /* Align text below the links section */
-    left: 0; /* Align text to the right of the logo and links */
-    width: 100%; /* Set width to utilize remaining space */
-    /*height: calc(50% - var(--border-width)); Set height to half of the container height minus border width */
-    overflow-y: auto; /* Add scrollbar if text exceeds container height */
-    color: var(--primary-color); /* Set text color */
-    filter: none; /* Remove drop shadow */
-    padding: 3%;
+    display: block; /* Make flyers block elements for proper layout */
   }
 </style>
 </head>
@@ -112,14 +88,10 @@
   <div class="links">
     <a href="index.html">Home</a> || <a href="story.html">Story</a> || <a href="flyer.html">Flyer</a>
   </div>
-  <p class="story-text">
-    <span style="font-weight:bold;">part 2 (22/11/18)</span><br><br>
-    STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT
-    STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT STORY GOES ON LOREM LIPSUM DUMMY TEXT
-    <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
-  </p>
-  <!-- <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_1_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2"> -->
+  <img class="flyer" src="./assets/20221_PT-I_flyer_quadrat_norborders_nologo.jpg" alt="Flyer of LEO Pt. 1">
+  <br>
+  <img class="flyer" src="./assets/202404_PT-II_flyer_quadrat_2_norborders_nologo.jpg" alt="Flyer of LEO Pt. 2">
 </div>
+
 </body>
 </html>
-
